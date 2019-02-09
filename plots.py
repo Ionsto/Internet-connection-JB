@@ -1,0 +1,27 @@
+import numpy as np
+import matplotlib.pyplot as plt
+latency_ms = np.loadtxt("raw_pings.txt")
+cumulitive_time = np.array([sum(latency_ms[:i+1]) for i in range(0,len(latency_ms))])
+
+print("Some quick stats")
+print("Average: {}ms, Std: {}ms".format(np.average(latency_ms),np.std(latency_ms)))
+print("Over 100ms sample count: {}%".format(len(latency_ms[np.where(latency_ms > 100)])/len(latency_ms) * 100))
+print("Over 100ms time: {}%".format(sum(latency_ms[np.where(latency_ms > 100)])/sum(latency_ms) * 100))
+
+plt.figure()
+plt.title("Cumulitive ping vs time")
+plt.step(cumulitive_time * 1e-3,latency_ms)
+plt.xlabel("Time (s)")
+plt.ylabel("Ping (ms)")
+plt.savefig("cping.png")
+plt.figure()
+plt.plot(latency_ms)
+plt.ylabel("Ping (ms)")
+plt.xlabel("Sample number")
+plt.savefig("ping_samples.png")
+plt.figure()
+plt.hist(latency_ms,log=True,bins=200)
+plt.xlabel("Ping (ms)")
+plt.ylabel("Frequency density (log scale)")
+plt.savefig("Hist.png")
+plt.show()
