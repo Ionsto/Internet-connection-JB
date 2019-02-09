@@ -29,8 +29,8 @@ Around 1.9% of packets were in this band - but they constituted around 48% of th
 Weighted representation of how long was spent at a specific latency time (height of sample is the width of it's bar)
 ![image](cping.png)
 
-Log histogram plot of the latenecy
 ![image](Hist.png)
+Log histogram plot of the latenecy
 
-Raw samples and their latencies.
 ![image](ping_samples.png)
+Raw samples and their latencies.
