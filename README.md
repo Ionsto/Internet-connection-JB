@@ -20,7 +20,7 @@ Using PsPing I collected around 5000 data points - checking the latency to vario
 The ping traffic was done over TCP due to JANet blocking ICMP traffic.  
 These plots show that most of the time latency is low ~ 20ms.
 On the other hand the average ping is around ~40ms with a standard deviation of 217ms!
-This stacks up to be almost equal to the latency of 4G LTE connections ~53ms [source](https://www.ofcom.org.uk/about-ofcom/latest/media/media-releases/2015/4g-outperforms-3g).
+This stacks up to be almost equal to the latency of 4G connections ~53ms [source](https://www.ofcom.org.uk/about-ofcom/latest/media/media-releases/2015/4g-outperforms-3g).
 
 This shows that the network can provide high speed connections - but that it is wildley variable.
 If you take 100ms as a threshold for poor latency (DSL connection) - then you can split the data into high and low speed connection times.
