@@ -25,12 +25,14 @@ This stacks up to be almost equal to the latency of 4G connections ~53ms [source
 This shows that the network can provide high speed connections - but that it is wildley variable.
 If you take 100ms as a threshold for poor latency (DSL connection) - then you can split the data into high and low speed connection times.
 Around 1.9% of packets were in this band - but they constituted around 48% of the time spent on the connection. Counterstrike reports ~10% loss intermitetly.
+One of the key parts of the data are the abundance of 300ms spikes - and massive 3 *second* spikes in latency. For reference the latency to the ISS is ~3-5 seconds, and 300ms is about time for a message to reach a satalite in geostatonary orbit.
 # Plots
+### Weight ping latency vs time
 Weighted representation of how long was spent at a specific latency time (height of sample is the width of it's bar)
 ![image](cping.png)
 
+### Log histogram plot of the latenecy
 ![image](Hist.png)
-Log histogram plot of the latenecy
 
+### Raw samples and their latencies.
 ![image](ping_samples.png)
-Raw samples and their latencies.
